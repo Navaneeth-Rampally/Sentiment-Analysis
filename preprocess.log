@@ -1,0 +1,14 @@
+2026-01-09 00:20:42,204-	INFO- 	Prepairing to download Nltk essentials
+2026-01-09 00:20:42,755-	INFO- 	Downloaded nltk essentials sucessfully.
+2026-01-09 00:20:42,755-	INFO- 	Initializing TextPreprocessor..
+2026-01-09 00:20:42,757-	INFO- 	Now performing the preprocess pipeline step by step
+2026-01-09 00:20:42,757-	INFO- 	Converting text into lowercase
+2026-01-09 00:20:42,757-	INFO- 	removing html tags form the text
+2026-01-09 00:20:42,758-	INFO- 	removing url..
+2026-01-09 00:20:42,758-	INFO- 	removing punctuation
+2026-01-09 00:20:42,758-	INFO- 	removing numbers form the text
+2026-01-09 00:20:42,758-	INFO- 	removing unwanted and extra spaces from the text
+2026-01-09 00:20:42,758-	INFO- 	conveting text into tokens
+2026-01-09 00:20:42,778-	INFO- 	removing stopwords from tokens
+2026-01-09 00:20:42,778-	INFO- 	lemmatizing the tokens
+2026-01-09 00:20:44,831-	INFO- 	Text preprocessing successfully done. Now you can see the clean text.
