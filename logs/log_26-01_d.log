@@ -1,0 +1,17 @@
+2026-01-15 22:09:51,262 - INFO - Prepairing to download Nltk essentials
+2026-01-15 22:09:51,703 - INFO - Downloaded nltk essentials sucessfully.
+2026-01-15 22:09:51,703 - INFO - Initializing TextPreprocessor..
+2026-01-15 22:09:51,712 - INFO - Now performing the preprocess pipeline step by step
+2026-01-15 22:09:51,712 - INFO - Converting text into lowercase
+2026-01-15 22:09:51,712 - INFO - removing html tags form the text
+2026-01-15 22:09:51,713 - INFO - removing url..
+2026-01-15 22:09:51,713 - INFO - removing punctuation
+2026-01-15 22:09:51,713 - INFO - removing numbers form the text
+2026-01-15 22:09:51,713 - INFO - removing unwanted and extra spaces from the text
+2026-01-15 22:09:51,713 - INFO - conveting text into tokens
+2026-01-15 22:09:51,762 - INFO - removing stopwords from tokens
+2026-01-15 22:09:51,762 - INFO - lemmatizing the tokens
+2026-01-15 22:09:53,159 - INFO - Text preprocessing successfully done. Now you can see the clean text.
+2026-01-15 22:41:23,261 - INFO - Initialized FeatureExtractor with method='bow' and max_features=50
+2026-01-15 22:41:23,261 - INFO - Starting fit_transform on 4 documents.
+2026-01-15 22:41:23,262 - INFO - Fit complete. Vocabulary size: 4, Matrix shape: (4, 4)

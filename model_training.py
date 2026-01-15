@@ -3,7 +3,7 @@
 
 import numpy as np
 import pandas as pd
-from sklear.model_selection import train_test_split, cross_val_predict
+from sklearn.model_selection import train_test_split, cross_val_predict
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.naive_bayes import MultinomialNB
@@ -63,7 +63,7 @@ class SentimentModel:
             if x_val is not None and y_val is not None:
                 val_pred = self.model.predict(x_val)
                 val_acc = accuracy_score(y_val, val_pred)
-                print(f"Validation Accuracy: {val_acc = 4f} ({val_acc*100:.2f})%")
+                print(f"Validation Accuracy: {val_acc:.4f} ({val_acc*100:.2f})%")
 
                 self.history['val_accuracy'] = val_acc
             self.history['train_accuracy'] = train_acc

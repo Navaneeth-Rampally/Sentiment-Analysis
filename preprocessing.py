@@ -7,21 +7,8 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer, WordNetLemmatizer
-import logging
-
-# Writng logging configurations:
-logger = logging.getLogger(__name__)
-
-# Setting logger level
-logger.setLevel(logging.DEBUG)
-
-# formatting the logs
-f = logging.Formatter('%(asctime)s-	%(levelname)s- 	%(message)s')
-
-#Setting the file where the logs has to be stored automatically
-fh = logging.FileHandler('preprocess.log')
-fh.setFormatter(f)
-logger.addHandler(fh)
+from logger import get_logger
+logger = get_logger(__name__)
 
 ## Downloading all required nltk essentials.
 def download_nltk_data():
