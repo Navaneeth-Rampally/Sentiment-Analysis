@@ -125,3 +125,83 @@ Traceback (most recent call last):
 ZeroDivisionError: Division by Zero is not allowed
 2026-01-20 23:52:09,659 - ERROR - It is due to error: Error in D:\CPSIT\Projects\Sentiment Analysis\test.py, line 12 : Cannot do this division: Division by Zero is not allowed 
 2026-01-20 23:52:09,659 - INFO - Application end
+2026-01-20 23:55:02,316 - INFO - Prepairing to download Nltk essentials
+2026-01-20 23:55:03,083 - INFO - Downloaded nltk essentials sucessfully.
+2026-01-20 23:55:03,083 - INFO - Initializing TextPreprocessor..
+2026-01-20 23:58:46,158 - INFO - Prepairing to download Nltk essentials
+2026-01-20 23:58:46,320 - INFO - Downloaded nltk essentials sucessfully.
+2026-01-20 23:58:46,321 - INFO - Initializing TextPreprocessor..
+2026-01-21 00:08:13,449 - INFO - Prepairing to download Nltk essentials
+2026-01-21 00:08:13,742 - INFO - Downloaded nltk essentials sucessfully.
+2026-01-21 00:08:13,742 - INFO - Initializing TextPreprocessor..
+2026-01-21 00:10:12,773 - INFO - Prepairing to download Nltk essentials
+2026-01-21 00:10:12,894 - INFO - Downloaded nltk essentials sucessfully.
+2026-01-21 00:10:12,894 - INFO - Initializing TextPreprocessor..
+2026-01-21 00:10:12,896 - INFO - Now performing the preprocess pipeline step by step
+2026-01-21 00:10:12,896 - INFO - Converting text into lowercase
+2026-01-21 00:10:12,896 - INFO - removing html tags form the text
+2026-01-21 00:10:12,896 - INFO - removing url..
+2026-01-21 00:10:12,896 - INFO - removing punctuation
+2026-01-21 00:10:12,896 - INFO - removing numbers form the text
+2026-01-21 00:10:12,896 - INFO - removing unwanted and extra spaces from the text
+2026-01-21 00:10:12,896 - INFO - conveting text into tokens
+2026-01-21 00:10:12,914 - INFO - removing stopwords from tokens
+2026-01-21 00:10:12,914 - INFO - lemmatizing the tokens
+2026-01-21 00:10:14,768 - INFO - Text preprocessing successfully done. Now you can see the clean text.
+2026-01-21 00:10:30,934 - INFO - Prepairing to download Nltk essentials
+2026-01-21 00:10:31,048 - INFO - Downloaded nltk essentials sucessfully.
+2026-01-21 00:10:31,048 - INFO - Initializing TextPreprocessor..
+2026-01-21 00:11:10,826 - INFO - Prepairing to download Nltk essentials
+2026-01-21 00:11:10,955 - INFO - Downloaded nltk essentials sucessfully.
+2026-01-21 00:12:34,823 - INFO - Prepairing to download Nltk essentials
+2026-01-21 00:12:34,941 - INFO - Downloaded nltk essentials sucessfully.
+2026-01-21 00:13:38,797 - INFO - Prepairing to download Nltk essentials
+2026-01-21 00:13:38,936 - INFO - Downloaded nltk essentials sucessfully.
+2026-01-21 00:15:18,328 - INFO - Prepairing to download Nltk essentials
+2026-01-21 00:15:18,648 - INFO - Downloaded nltk essentials sucessfully.
+2026-01-21 00:15:53,065 - INFO - Loading the required dataset..
+2026-01-21 00:15:54,448 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/imdb/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-21 00:15:54,756 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/stanfordnlp/imdb/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-21 00:15:54,766 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/stanfordnlp/imdb/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/README.md "HTTP/1.1 200 OK"
+2026-01-21 00:15:55,061 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/imdb/resolve/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/imdb.py "HTTP/1.1 307 Temporary Redirect"
+2026-01-21 00:15:55,369 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/stanfordnlp/imdb/resolve/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/imdb.py "HTTP/1.1 404 Not Found"
+2026-01-21 00:15:56,291 - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/imdb/imdb.py "HTTP/1.1 200 OK"
+2026-01-21 00:15:56,597 - INFO - HTTP Request: GET https://huggingface.co/api/datasets/imdb/revision/e6281661ce1c48d982bc483cf8a173c1bbeb5d31 "HTTP/1.1 307 Temporary Redirect"
+2026-01-21 00:15:56,907 - INFO - HTTP Request: GET https://huggingface.co/api/datasets/stanfordnlp/imdb/revision/e6281661ce1c48d982bc483cf8a173c1bbeb5d31 "HTTP/1.1 200 OK"
+2026-01-21 00:15:57,211 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/imdb/resolve/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/.huggingface.yaml "HTTP/1.1 307 Temporary Redirect"
+2026-01-21 00:15:57,436 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/stanfordnlp/imdb/resolve/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-21 00:15:57,828 - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=imdb "HTTP/1.1 404 Not Found"
+2026-01-21 00:15:58,133 - INFO - HTTP Request: GET https://huggingface.co/api/datasets/imdb/tree/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/plain_text?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-01-21 00:15:58,441 - INFO - HTTP Request: GET https://huggingface.co/api/datasets/stanfordnlp/imdb/tree/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/plain_text?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-01-21 00:15:58,699 - INFO - HTTP Request: GET https://huggingface.co/api/datasets/imdb/tree/e6281661ce1c48d982bc483cf8a173c1bbeb5d31?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-01-21 00:15:58,954 - INFO - HTTP Request: GET https://huggingface.co/api/datasets/stanfordnlp/imdb/tree/e6281661ce1c48d982bc483cf8a173c1bbeb5d31?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-01-21 00:15:59,260 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/imdb/resolve/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/dataset_infos.json "HTTP/1.1 307 Temporary Redirect"
+2026-01-21 00:15:59,568 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/stanfordnlp/imdb/resolve/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-01-21 00:15:59,725 - INFO - Dataset loaded successfully.
+2026-01-21 00:15:59,725 - INFO - Converting into dataframes
+2026-01-21 00:16:05,734 - INFO - Creating a new coloumn named sentiment
+2026-01-21 00:16:05,756 - INFO - Renaming the columns
+2026-01-21 00:16:05,764 - INFO - Fetching the sample database which is required by the user
+2026-01-21 00:22:57,289 - INFO - Loading the required dataset..
+2026-01-21 00:22:57,657 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/imdb/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-21 00:22:57,970 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/stanfordnlp/imdb/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-21 00:22:57,980 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/stanfordnlp/imdb/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/README.md "HTTP/1.1 200 OK"
+2026-01-21 00:22:58,277 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/imdb/resolve/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/imdb.py "HTTP/1.1 307 Temporary Redirect"
+2026-01-21 00:22:58,585 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/stanfordnlp/imdb/resolve/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/imdb.py "HTTP/1.1 404 Not Found"
+2026-01-21 00:22:59,504 - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/imdb/imdb.py "HTTP/1.1 200 OK"
+2026-01-21 00:22:59,812 - INFO - HTTP Request: GET https://huggingface.co/api/datasets/imdb/revision/e6281661ce1c48d982bc483cf8a173c1bbeb5d31 "HTTP/1.1 307 Temporary Redirect"
+2026-01-21 00:23:00,116 - INFO - HTTP Request: GET https://huggingface.co/api/datasets/stanfordnlp/imdb/revision/e6281661ce1c48d982bc483cf8a173c1bbeb5d31 "HTTP/1.1 200 OK"
+2026-01-21 00:23:00,427 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/imdb/resolve/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/.huggingface.yaml "HTTP/1.1 307 Temporary Redirect"
+2026-01-21 00:23:00,734 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/stanfordnlp/imdb/resolve/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-21 00:23:01,042 - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=imdb "HTTP/1.1 404 Not Found"
+2026-01-21 00:23:01,351 - INFO - HTTP Request: GET https://huggingface.co/api/datasets/imdb/tree/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/plain_text?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-01-21 00:23:01,655 - INFO - HTTP Request: GET https://huggingface.co/api/datasets/stanfordnlp/imdb/tree/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/plain_text?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-01-21 00:23:01,963 - INFO - HTTP Request: GET https://huggingface.co/api/datasets/imdb/tree/e6281661ce1c48d982bc483cf8a173c1bbeb5d31?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-01-21 00:23:02,270 - INFO - HTTP Request: GET https://huggingface.co/api/datasets/stanfordnlp/imdb/tree/e6281661ce1c48d982bc483cf8a173c1bbeb5d31?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-01-21 00:23:02,577 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/imdb/resolve/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/dataset_infos.json "HTTP/1.1 307 Temporary Redirect"
+2026-01-21 00:23:02,885 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/stanfordnlp/imdb/resolve/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-01-21 00:23:02,978 - INFO - Dataset loaded successfully.
+2026-01-21 00:23:02,979 - INFO - Converting into dataframes
+2026-01-21 00:23:09,352 - INFO - Creating a new coloumn named sentiment
+2026-01-21 00:23:09,360 - INFO - Renaming the columns
+2026-01-21 00:23:09,376 - INFO - Fetching the sample database which is required by the user

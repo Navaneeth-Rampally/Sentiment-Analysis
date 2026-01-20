@@ -21,10 +21,11 @@ def download_nltk_data():
         nltk.download('punkt_tab')
     except Exception as e:
         logger.error(f"Failed to download NLTK data: {e}")
-
 download_nltk_data()
 logger.info('Downloaded nltk essentials sucessfully.')
+
 class TextPreprocessor:
+    """A complete text preprocessing pipeline for Sentiment Analysis."""
     def __init__(self, use_stemming = False, use_lemmatization = True):
         logger.info('Initializing TextPreprocessor..')
         self.stop_words = set(stopwords.words('english'))
@@ -94,6 +95,9 @@ class TextPreprocessor:
         clean_text = ' '.join(tokens)
         logger.info('Text preprocessing successfully done. Now you can see the clean text.')
         return clean_text
+    def preprocess_dataframe(self, df, text_column = 'review'):
+        df['cleaned_text'] = df[text_column].apply(lambda x: self.preprocess_text(x))
+        return df
     
 if __name__ == "__main__":
     sample_text = """ <div>Hello NLP enthusiasts!!!  Check out this link: https://example.com/data for   more info... 
@@ -101,7 +105,7 @@ I cAn't believe the results (99% accuracy)!!! #MachineLearning @DataScience.
 The price is $50.00 & it's    very    cheap. Contact support@ai.net for help. <br> 
 This is a    ReAlly   dirty  text sample.....  12345 </div>  """
 
-preprocessor = TextPreprocessor(use_lemmatization=True)
-cleaned = preprocessor.preprocess_text(sample_text)
-print("\n --Preprocessed Text -- ")
-print(cleaned)
+    preprocessor = TextPreprocessor(use_lemmatization=True)
+    cleaned = preprocessor.preprocess_text(sample_text)
+    print("\n --Preprocessed Text -- ")
+    print(cleaned)
