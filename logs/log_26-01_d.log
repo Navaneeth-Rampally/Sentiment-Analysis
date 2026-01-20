@@ -44,3 +44,84 @@ Traceback (most recent call last):
     raise ZeroDivisionError("Divison by zero is not allowed.")
 ZeroDivisionError: Divison by zero is not allowed.
 2026-01-20 18:35:40,630 - INFO - Application ended.
+2026-01-20 19:57:41,171 - INFO - Application started
+2026-01-20 19:57:41,171 - INFO - Division is successful : 10 / 2 = 5.0
+2026-01-20 19:57:41,172 - ERROR - Failed to divide 6 by 0
+Traceback (most recent call last):
+  File "D:\CPSIT\Projects\Sentiment Analysis\test.py", line 10, in divide
+    raise ZeroDivisionError("Divison by zero is not allowed.")
+ZeroDivisionError: Divison by zero is not allowed.
+2026-01-20 19:57:41,173 - INFO - Application ended.
+2026-01-20 19:58:36,543 - INFO - Application started
+2026-01-20 19:58:36,543 - INFO - Division is successful : 10 / 2 = 5.0
+2026-01-20 19:58:36,543 - ERROR - Failed to divide 6 by 0
+Traceback (most recent call last):
+  File "D:\CPSIT\Projects\Sentiment Analysis\test.py", line 10, in divide
+    raise ZeroDivisionError("Divison by zero is not allowed.")
+ZeroDivisionError: Divison by zero is not allowed.
+2026-01-20 19:58:36,544 - INFO - Application ended.
+2026-01-20 23:33:22,540 - INFO - Application started
+2026-01-20 23:33:22,541 - INFO - Division is successful : 10 / 2 = 5.0
+2026-01-20 23:33:22,541 - ERROR - Failed to divide 6 by 0
+Traceback (most recent call last):
+  File "D:\CPSIT\Projects\Sentiment Analysis\test.py", line 10, in divide
+    raise ZeroDivisionError("Divison by zero is not allowed.")
+ZeroDivisionError: Divison by zero is not allowed.
+2026-01-20 23:33:22,543 - INFO - Application ended.
+2026-01-20 23:39:12,459 - INFO - Application started
+2026-01-20 23:39:12,460 - INFO - Division is Succesfull : 10 / 2 = 5.0
+2026-01-20 23:39:12,460 - ERROR - Failed to divide 6 by 0
+Traceback (most recent call last):
+  File "D:\CPSIT\Projects\Sentiment Analysis\test.py", line 12, in divide
+    raise ZeroDivisionError("Division by Zero is not allowed")
+ZeroDivisionError: Division by Zero is not allowed
+2026-01-20 23:39:12,460 - INFO - Application end
+2026-01-20 23:39:54,426 - INFO - Application started
+2026-01-20 23:39:54,426 - INFO - Division is Succesfull : 10 / 2 = 5.0
+2026-01-20 23:39:54,427 - ERROR - Failed to divide 6 by 0
+Traceback (most recent call last):
+  File "D:\CPSIT\Projects\Sentiment Analysis\test.py", line 12, in divide
+    raise ZeroDivisionError("Division by Zero is not allowed")
+ZeroDivisionError: Division by Zero is not allowed
+2026-01-20 23:39:54,427 - INFO - Application end
+2026-01-20 23:45:12,675 - INFO - Application started
+2026-01-20 23:45:12,675 - INFO - Division is Succesfull : 10 / 2 = 5.0
+2026-01-20 23:45:12,676 - ERROR - Failed to divide 6 by 0
+Traceback (most recent call last):
+  File "D:\CPSIT\Projects\Sentiment Analysis\test.py", line 12, in divide
+    raise ZeroDivisionError("Division by Zero is not allowed")
+ZeroDivisionError: Division by Zero is not allowed
+2026-01-20 23:45:12,676 - INFO - Application end
+2026-01-20 23:47:19,422 - INFO - Application started
+2026-01-20 23:47:19,422 - INFO - Division is Succesfull : 10 / 2 = 5.0
+2026-01-20 23:47:19,422 - ERROR - Failed to divide 6 by 0
+Traceback (most recent call last):
+  File "D:\CPSIT\Projects\Sentiment Analysis\test.py", line 12, in divide
+    raise ZeroDivisionError("Division by Zero is not allowed")
+ZeroDivisionError: Division by Zero is not allowed
+2026-01-20 23:47:19,423 - INFO - Application end
+2026-01-20 23:50:05,444 - INFO - Application started
+2026-01-20 23:50:05,444 - INFO - Division is Succesfull : 10 / 2 = 5.0
+2026-01-20 23:50:05,444 - ERROR - Failed to divide 6 by 0
+Traceback (most recent call last):
+  File "D:\CPSIT\Projects\Sentiment Analysis\test.py", line 12, in divide
+    raise ZeroDivisionError("Division by Zero is not allowed")
+ZeroDivisionError: Division by Zero is not allowed
+2026-01-20 23:50:05,445 - INFO - Application end
+2026-01-20 23:51:45,532 - INFO - Application started
+2026-01-20 23:51:45,533 - INFO - Division is Succesfull : 10 / 2 = 5.0
+2026-01-20 23:51:45,533 - ERROR - Failed to divide 6 by 0
+Traceback (most recent call last):
+  File "D:\CPSIT\Projects\Sentiment Analysis\test.py", line 12, in divide
+    raise ZeroDivisionError("Division by Zero is not allowed")
+ZeroDivisionError: Division by Zero is not allowed
+2026-01-20 23:51:45,533 - INFO - Application end
+2026-01-20 23:52:09,657 - INFO - Application started
+2026-01-20 23:52:09,657 - INFO - Division is Succesfull : 10 / 2 = 5.0
+2026-01-20 23:52:09,657 - ERROR - Failed to divide 6 by 0
+Traceback (most recent call last):
+  File "D:\CPSIT\Projects\Sentiment Analysis\test.py", line 12, in divide
+    raise ZeroDivisionError("Division by Zero is not allowed")
+ZeroDivisionError: Division by Zero is not allowed
+2026-01-20 23:52:09,659 - ERROR - It is due to error: Error in D:\CPSIT\Projects\Sentiment Analysis\test.py, line 12 : Cannot do this division: Division by Zero is not allowed 
+2026-01-20 23:52:09,659 - INFO - Application end
