@@ -15,3 +15,32 @@
 2026-01-15 22:41:23,261 - INFO - Initialized FeatureExtractor with method='bow' and max_features=50
 2026-01-15 22:41:23,261 - INFO - Starting fit_transform on 4 documents.
 2026-01-15 22:41:23,262 - INFO - Fit complete. Vocabulary size: 4, Matrix shape: (4, 4)
+2026-01-20 18:26:34,194 - INFO - Prepairing to download Nltk essentials
+2026-01-20 18:26:34,502 - INFO - Downloaded nltk essentials sucessfully.
+2026-01-20 18:26:34,503 - INFO - Initializing TextPreprocessor..
+2026-01-20 18:26:34,517 - INFO - Now performing the preprocess pipeline step by step
+2026-01-20 18:26:34,517 - INFO - Converting text into lowercase
+2026-01-20 18:26:34,517 - INFO - removing html tags form the text
+2026-01-20 18:26:34,517 - INFO - removing url..
+2026-01-20 18:26:34,517 - INFO - removing punctuation
+2026-01-20 18:26:34,517 - INFO - removing numbers form the text
+2026-01-20 18:26:34,517 - INFO - removing unwanted and extra spaces from the text
+2026-01-20 18:26:34,517 - INFO - conveting text into tokens
+2026-01-20 18:26:34,610 - INFO - removing stopwords from tokens
+2026-01-20 18:26:34,610 - INFO - lemmatizing the tokens
+2026-01-20 18:26:36,612 - INFO - Text preprocessing successfully done. Now you can see the clean text.
+2026-01-20 18:26:47,357 - INFO - Application started
+2026-01-20 18:26:47,357 - INFO - Division is successful : 10 / 2 = 5.0
+2026-01-20 18:26:47,357 - INFO - Application ended.
+2026-01-20 18:31:59,163 - INFO - Application started
+2026-01-20 18:31:59,164 - INFO - Division is successful : 10 / 2 = 5.0
+2026-01-20 18:31:59,164 - ERROR - Failed to divide 6 by 0
+2026-01-20 18:31:59,164 - INFO - Application ended.
+2026-01-20 18:35:40,629 - INFO - Application started
+2026-01-20 18:35:40,629 - INFO - Division is successful : 10 / 2 = 5.0
+2026-01-20 18:35:40,629 - ERROR - Failed to divide 6 by 0
+Traceback (most recent call last):
+  File "D:\CPSIT\Projects\Sentiment Analysis\test.py", line 10, in divide
+    raise ZeroDivisionError("Divison by zero is not allowed.")
+ZeroDivisionError: Divison by zero is not allowed.
+2026-01-20 18:35:40,630 - INFO - Application ended.

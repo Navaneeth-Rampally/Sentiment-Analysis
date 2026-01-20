@@ -18,7 +18,7 @@ from logger import get_logger
 logger = get_logger("__name__")
 
 class SentimentModel:
-    def __inti__(self, model_type = 'logistic_regression'):
+    def __init__(self, model_type = 'logistic_regression'):
 
         self.mode_type = model_type
         self.model = None
@@ -51,7 +51,7 @@ class SentimentModel:
         def train(self, x_train, y_train, x_val = None, y_val = None):
             if self.model is None:
                 self.create_model()
-            self.mode.fit(x_train, y_train)
+            self.model.fit(x_train, y_train)
 
             train_pred = self.model.predict(x_train)
             train_acc = accuracy_score(y_train, train_pred)
@@ -83,3 +83,20 @@ class SentimentModel:
             logger.info(f"These are confusion metrics {cm}")
 
             return metrics
+        def predict(self,x):
+            """Get prediction probabilities"""
+            if hasattr(sel.model, 'predict_proba'):
+                return self.model.predict_proba(x)
+            elif hasattr(self.model, 'decision_function'):
+                # For models like SVM that do not have predict_proba
+
+                from scipy.special import expit
+                decision = self.model.decision_fumction(x)
+                proba = explit(decision)
+                return np.vstack([1 - proba, proba]).T
+            else: 
+                return None
+            
+if __name__ == "__main__":
+    model = SentimentModel(model_type = "logistic_regression")
+    print(model)

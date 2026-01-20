@@ -38,7 +38,7 @@ class SentimentAnalysisPipeline:
 
 
         # preprocessing
-        df = self.preprocessor.preprocess_text(df)
+        df = self.preprocessor.preprocess_dataframe(df)
 
         X = self.feature_extractor.fit_transform(
             df['cleaned_text'].tolist()
@@ -54,8 +54,64 @@ class SentimentAnalysisPipeline:
         self.model.train(X_train, y_train)
 
         metrics = self.model.evaluate(X_test, y_test)
-
+        self.is_trained = True
+        self.save_pipeline('sentiment_model.pkl')
         return metrics
+    def predict_sentiment(self,text):
+        if not self.is_trained:
+            raise ValueError("Model is not trained yet. Please run the training pipeline first.")
+        
+        # Preprocess the input text
+        cleaned_text = self.preprocessor.preprocess_text(text)
+
+        #features 
+        features = self.feature_extractor.transform([cleaned_text])
+
+        # Predict sentiment
+        prediction = self.model.predict(features)[0]
+        try:
+            probabilities = self.model.predict_proba(features)[0]
+        except:
+            confidence = None
+        return prediction, confidence
+    def save_pipeline(self, filepath):
+        
+        pipeline_data = {
+            'preprocessor' : self.preprocessor,
+            'feature_extractor' : self.feature_extractor,
+            'model': self.model,
+            'is_trained': self.is_trained
+        }
+        with open(filepath, "wb") as f:
+            pickle.dump(pipeline_data,f)
+
+        print(f"Pipeline saved to {filepath}")
+
+        def load_pipeline(self,filepath):
+
+            with open(filepath, 'rb') as f:
+                pipeline_data = pickle.load(f)
+            self.preprocessor = pipeline_data['preprocessor']
+            self.feature_extractor = pipeline_data['feature_extractor']
+            self.model = pipeline_data['model']
+            self.is_trained = pipeline_data['is_trained']
+
+            print(f"Pipeline loaded from {filepath}")
+
+        def predict_batch(self,texts):
+            if not self.is_trained: 
+                raise ValueError("Model Not trained yet so run the pipeline")
+            cleaned_text = [self.preprocessor.preprocess_text(text) for text in texts]
+            features = self.feature_extractor.transform(cleaned_text)
+
+            predictions = self.model.predict(features)
+
+            try:
+                probabilities = self.model.predict_proba(features)
+            except:
+                probabilities = None
+            return predictions, probabilities
+
 
 
 if __name__ == "__main__":
