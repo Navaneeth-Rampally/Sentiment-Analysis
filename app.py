@@ -209,6 +209,7 @@ def show_data_exploration():
     
     if st.button("🔄 Load Sample Data"):
         with st.spinner("Loading IMDB dataset..."):
+            # Ensure your data_ingestion module returns a dataframe with 'sentiment' and 'review' columns
             train_df, test_df = load_imdb_data(sample_size=1000)
             st.session_state.training_data = pd.concat([train_df, test_df], ignore_index=True)
         
@@ -217,30 +218,44 @@ def show_data_exploration():
     if st.session_state.training_data is not None:
         df = st.session_state.training_data
         
+        # --- DEBUGGING HELPER ---
+        # Uncomment the line below if you suspect your column names or values are different
+        # st.write("Unique Sentiment Values:", df['sentiment'].unique())
+        
         # Dataset statistics
         col1, col2, col3, col4 = st.columns(4)
+        
+        # Safe filtering
+        pos_df = df[df['sentiment'] == 'positive']
+        neg_df = df[df['sentiment'] == 'negative']
         
         with col1:
             st.metric("Total Reviews", len(df))
         with col2:
-            st.metric("Positive", len(df[df['sentiment'] == 'positive']))
+            st.metric("Positive", len(pos_df))
         with col3:
-            st.metric("Negative", len(df[df['sentiment'] == 'negative']))
+            st.metric("Negative", len(neg_df))
         with col4:
-            avg_length = df['review'].str.len().mean()
-            st.metric("Avg Length", f"{avg_length:.0f} chars")
+            if 'review' in df.columns:
+                avg_length = df['review'].str.len().mean()
+                st.metric("Avg Length", f"{avg_length:.0f} chars")
+            else:
+                st.error("Column 'review' not found")
         
         # Sentiment distribution
         st.markdown("### 📊 Sentiment Distribution")
         sentiment_counts = df['sentiment'].value_counts()
-        fig = px.pie(
-            values=sentiment_counts.values,
-            names=sentiment_counts.index,
-            title="Sentiment Balance",
-            color=sentiment_counts.index,
-            color_discrete_map={'positive': '#28a745', 'negative': '#dc3545'}
-        )
-        st.plotly_chart(fig, use_container_width=True)
+        
+        if not sentiment_counts.empty:
+            fig = px.pie(
+                values=sentiment_counts.values,
+                names=sentiment_counts.index,
+                title="Sentiment Balance",
+                color=sentiment_counts.index,
+                # Safe color mapping using get just in case keys are missing
+                color_discrete_map={'positive': '#28a745', 'negative': '#dc3545'}
+            )
+            st.plotly_chart(fig, use_container_width=True)
         
         # Sample reviews
         st.markdown("### 📝 Sample Reviews")
@@ -249,13 +264,19 @@ def show_data_exploration():
         
         with col1:
             st.markdown("#### ✅ Positive Review")
-            pos_sample = df[df['sentiment'] == 'positive'].iloc[0]['review']
-            st.success(pos_sample[:300] + "...")
+            if not pos_df.empty:
+                pos_sample = pos_df.iloc[0]['review']
+                st.success(pos_sample[:300] + "...")
+            else:
+                st.warning("No positive reviews found.")
         
         with col2:
             st.markdown("#### ❌ Negative Review")
-            neg_sample = df[df['sentiment'] == 'negative'].iloc[0]['review']
-            st.error(neg_sample[:300] + "...")
+            if not neg_df.empty:
+                neg_sample = neg_df.iloc[0]['review']
+                st.error(neg_sample[:300] + "...")
+            else:
+                st.warning("No negative reviews found.")
         
         # Show dataframe
         st.markdown("### 📋 Data Preview")
@@ -550,8 +571,9 @@ def show_analysis():
 def main():
     """Main application"""
     initialize_session_state()
-    main_page()
+    main_page() 
 
 
 if __name__ == "__main__":
     main()
+

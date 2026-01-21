@@ -23,12 +23,13 @@ class FeatureExtractor:
                 min_df=2,
                 max_df=0.8
             )
-            feature_matrix = self.vectorizer.fit_transform(documents)
             
-            # --- FIX: Calculate this BEFORE using it in logger ---
-            vocab_size = len(self.vectorizer.vocabulary_)            
-            return feature_matrix
-    def transform_(self, documents):
+        # FIX: Apply fit_transform for BOTH methods here
+        feature_matrix = self.vectorizer.fit_transform(documents)
+        return feature_matrix
+
+    # FIX: Renamed from transform_ to transform (removed underscore)
+    def transform(self, documents):
         """ Transform new documents using the appropriate vectorizer"""
         if self.vectorizer is None:
             raise ValueError("The vectorizer has not been fitted yet.")
@@ -41,7 +42,6 @@ class FeatureExtractor:
         return self.vectorizer.get_feature_names_out()
 
 if __name__ == "__main__":
-    # --- FIX: Added commas here! ---
     sample_docs = [
         "This movie is too booring!.", 
         "Amazing movie to watch and i recommend this to everyone who like watching movies.",
@@ -49,13 +49,14 @@ if __name__ == "__main__":
         "The lead actor playes an amazing role which makes it interesting to watch this movie."
     ]
     
-    # Note: With only 4 documents, 'min_df=2' is strict. 
-    # Only words appearing in 2+ sentences (like 'movie') will be kept.
+    # Test BOW
+    print("Testing Bag of Words:")
     bow = FeatureExtractor(method='bow', max_features=50)
     bow_matrix = bow.fit_transform(sample_docs)
     print(bow.get_feature_names()[:10])
 
+    # Test TF-IDF
+    print("\nTesting TF-IDF:")
     tfidf = FeatureExtractor(method='tfidf', max_features=50)
     tfidf_matrix = tfidf.fit_transform(sample_docs)
     print(tfidf.get_feature_names()[:10])
-    

@@ -37,7 +37,7 @@ class TextPreprocessor:
     def step1_lowercase(self,text):
         logger.info('Converting text into lowercase')
         return text.lower()
-    def step2_remove_html_tags(self,text):
+    def step2_remove_html(self,text):
         logger.info('removing html tags form the text')
         # Removing tags like <br>, <u>... form the text.
         clean_text = re.sub(r'<.*?>', '', text)
@@ -78,7 +78,7 @@ class TextPreprocessor:
     def preprocess_text(self,text):
         logger.info('Now performing the preprocess pipeline step by step')
         text = self.step1_lowercase(text)
-        text = self.step2_remove_html_tags(text)
+        text = self.step2_remove_html(text)
         text = self.step3_remove_url(text)
         text = self.step4_remove_punctuation(text)
         text = self.step5_remove_numbers(text)
