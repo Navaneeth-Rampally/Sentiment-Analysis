@@ -1,19 +1,29 @@
-Project Title: IMDB Sentiment Analysis Pipeline
+# 🎭 IMDB Sentiment Analysis Pipeline
 
-Project Overview: 
-This project implements a modular end-to-end data processing pipeline for Sentiment Analysis using the IMDB Movie Reviews dataset. It features a robust Data Ingestion module to fetch and structure data from Hugging Face and a comprehensive Text Preprocessing engine that cleans and normalizes raw text for downstream NLP tasks. The system is built with professional logging to track execution flow and debugging.
+## 📖 Project Overview
+This project is a modular, end-to-end Machine Learning pipeline designed to perform **Sentiment Analysis** on the IMDB Movie Reviews dataset. Beyond just building a model, the focus of this project was to create a robust **Data Engineering** workflow.
 
-Key components and Features:
-1. Data ingestion
-2. Text Preprocessing
+The system automates the ingestion of data from Hugging Face, processes raw text using advanced NLP techniques, and provides a real-time web interface for users to test the model. It is architected with production-grade standards, including comprehensive **logging** and **modular code structure** to ensure scalability and easy debugging.
 
-Libraries Used:
-1. pandas & numpy: Data manipulation and numerical operations.
+## 🚀 Key Features
+* **Automated Data Ingestion:** Direct API fetching and structuring of the IMDB dataset from Hugging Face.
+* **Advanced Text Preprocessing:** A dedicated engine for cleaning, tokenization, stopword removal, and lemmatization to prepare high-quality data.
+* **Modular Architecture:** Code is organized into separate modules (Ingestion, Preprocessing, Evaluation) rather than a single script.
+* **System Logging:** Integrated logging to track execution flow, errors, and performance metrics during runtime.
+* **Interactive UI:** A user-friendly web application built with Streamlit for real-time inference.
 
-2. nltk: Natural language processing tasks (tokenization, stopwords, lemmatization).
+## 🛠️ Technologies & Tools Used
 
-3. datasets: Accessing the IMDB dataset.
+### Core Stack
+* **Language:** `Python 3`
+* **Web Framework:** `Streamlit` (for the user interface)
+* **Deployment:** `AWS EC2` (Ubuntu Linux)
 
-4. scikit-learn: (Planned) For model building.
-
-5. matplotlib, seaborn, plotly: (Planned) For data visualization.
+### Libraries & Frameworks
+| Category | Library | Purpose |
+| :--- | :--- | :--- |
+| **Data Manipulation** | `Pandas`, `NumPy` | Handling structured data and numerical operations. |
+| **NLP** | `NLTK` | Tokenization, Stopwords removal, Lemmatization. |
+| **Data Source** | `Datasets` (Hugging Face) | Fetching the IMDB benchmark dataset efficiently. |
+| **Machine Learning** | `Scikit-Learn` | Model building, training, and evaluation pipelines. |
+| **Visualization** | `Matplotlib`, `Seaborn` | Visualizing data distribution and model performance. |
